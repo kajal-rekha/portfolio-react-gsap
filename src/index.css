@@ -45,6 +45,7 @@ body {
   min-height: 100vh;
   margin: 1%;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 /* common style */
@@ -125,4 +126,71 @@ hr {
 .header .box.skills {
   background: linear-gradient(135deg, var(--color-cyan) 90%, transparent 10%);
   color: var(--color-light);
+}
+
+/* projects styles */
+.projects-section {
+  margin-top: 6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projects-section .titles {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1vw;
+  overflow: hidden;
+}
+
+.projects-section .titles span {
+  font-family: var(--font-sans-serif);
+  font-size: 1.8rem;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.projects-list-wrapper {
+  background-color: var(--color-yellow);
+  padding: 6vw 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-item span {
+  font-family: var(--font-sans-serif);
+  font-size: 1.8rem; /* drafted */
+  color: var(--color-dark);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.project-titles {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 1rem;
+  overflow: hidden;
 }
