@@ -48,8 +48,6 @@ body {
   overflow: hidden;
 }
 
-/* common style */
-
 .container {
   max-width: 95vw;
   margin: 0 auto;
@@ -173,9 +171,27 @@ hr {
   cursor: pointer;
 }
 
+.project-item .multiple-h2 {
+  display: none;
+}
+
+.project-item:hover .project-details,
+.project-item:hover .single-h2 {
+  display: none;
+}
+
+.project-item:hover .multiple-h2 {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: rowrap;
+  font-style: italic;
+  color: var(--color-light);
+}
+
 .project-item span {
   font-family: var(--font-sans-serif);
-  font-size: 1.8rem; /* drafted */
+  font-size: 1.8rem;
   color: var(--color-dark);
   text-transform: uppercase;
   font-weight: 500;

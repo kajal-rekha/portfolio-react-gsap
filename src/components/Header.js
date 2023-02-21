@@ -57,7 +57,7 @@ const Header = () => {
         <span ref={link1}>Front-end developer</span>
         <a
           ref={link2}
-          href="https://www.google.com"
+          href="https://docs.google.com/document/d/1EMSJU63KL6L1NDfXlTS9F_nWjINVLwZhYC0BuyFrA9w/edit?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
