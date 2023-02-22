@@ -180,3 +180,58 @@ export const useProjectsNumbers = (arr, trig) => {
     );
   }, [arr, trig]);
 };
+
+export const useSkillTextReveal = (el) => {
+  useEffect(() => {
+    gsap.fromTo(
+      el,
+      {
+        y: 200,
+      },
+      {
+        y: 0,
+        duration: 1,
+        ease: "power4.out",
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: el,
+        },
+      },
+      [el]
+    );
+  });
+};
+
+export const useImageReveal = (el, delay = 0) => {
+  useEffect(() => {
+    gsap.fromTo(
+      el.current,
+      {
+        y: "-100vh",
+      },
+      {
+        y: 0,
+        duration: 2,
+        delay,
+        ease: "power4.out",
+      }
+    );
+  }, [el, delay]);
+};
+
+export const useHeadlineReveal = (el, delay = 0) => {
+  useEffect(() => {
+    gsap.fromTo(
+      el.current,
+      {
+        y: "-100vh",
+      },
+      {
+        y: 0,
+        duration: 2,
+        delay,
+        ease: "power4.out",
+      }
+    );
+  }, [el, delay]);
+};

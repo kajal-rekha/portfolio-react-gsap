@@ -71,9 +71,14 @@ const Header = () => {
         >
           Send Email
         </a>
-        <Link ref={link4} href="/contact">
+        <a
+          ref={link4}
+          href="https://www.facebook.com/anowar.kajal"
+          target="_blank"
+          rel="noreferrer"
+        >
           Contact Me
-        </Link>
+        </a>
       </div>
 
       <div className="row">
