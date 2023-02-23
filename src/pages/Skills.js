@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useSkillLineReveal, useSkillTextReveal } from "../hooks/gsap";
+import { useSkillTextReveal } from "../hooks/gsap";
 
 const data = [
   {
@@ -58,49 +58,53 @@ const Skills = () => {
       <h2>My Skills</h2>
 
       <div className="skills-wrapper">
-        <ul className="skills-left">
-          {data
-            .filter((_, i) => i < Math.floor(data.length / 2))
-            .map((skill, i) => (
-              <li
-                key={skill.id}
-                className="skill-item"
-                ref={(el) => (skillItemRef.current[i] = el)}
-              >
-                <div
-                  className="flex"
-                  ref={(el) => (skillTextRef.current[i] = el)}
+        <div className="skills-left">
+          <ul>
+            {data
+              .filter((_, i) => i < Math.floor(data.length / 2))
+              .map((skill, i) => (
+                <li
+                  key={skill.id}
+                  className="skill-item"
+                  ref={(el) => (skillItemRef.current[i] = el)}
                 >
-                  <span className="skill-number ">
-                    {String(skill.id).padStart(2, 0).padEnd(3, ".")}
-                  </span>
-                  <span className="skill-name"> {skill.title}</span>
-                </div>
-              </li>
-            ))}
-        </ul>
+                  <div
+                    className="flex"
+                    ref={(el) => (skillTextRef.current[i] = el)}
+                  >
+                    <span className="skill-number ">
+                      {String(skill.id).padStart(2, 0).padEnd(3, ".")}
+                    </span>
+                    <span className="skill-name"> {skill.title}</span>
+                  </div>
+                </li>
+              ))}
+          </ul>
+        </div>
 
-        <ul className="skills-right ">
-          {data
-            .filter((_, i) => i >= Math.floor(data.length / 2))
-            .map((skill, i) => (
-              <li
-                key={skill.id}
-                className="skill-item "
-                ref={(el) => (skillItem2Ref.current[i] = el)}
-              >
-                <div
-                  className="flex "
-                  ref={(el) => (skillText2Ref.current[i] = el)}
+        <div className="skills-right ">
+          <ul>
+            {data
+              .filter((_, i) => i >= Math.floor(data.length / 2))
+              .map((skill, i) => (
+                <li
+                  key={skill.id}
+                  className="skill-item "
+                  ref={(el) => (skillItem2Ref.current[i] = el)}
                 >
-                  <span className="skill-number ">
-                    {String(skill.id).padStart(2, 0).padEnd(3, ".")}
-                  </span>
-                  <span className="skill-name"> {skill.title}</span>
-                </div>
-              </li>
-            ))}
-        </ul>
+                  <div
+                    className="flex "
+                    ref={(el) => (skillText2Ref.current[i] = el)}
+                  >
+                    <span className="skill-number ">
+                      {String(skill.id).padStart(2, 0).padEnd(3, ".")}
+                    </span>
+                    <span className="skill-name"> {skill.title}</span>
+                  </div>
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
