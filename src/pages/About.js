@@ -6,7 +6,7 @@ const About = () => {
   const aboutHeadlineRef = useRef(null);
 
   useImageReveal(aboutImageRef, 0.5);
-  useHeadlineReveal(aboutHeadlineRef, 1);
+  useHeadlineReveal(aboutHeadlineRef, 2);
 
   return (
     <div className="about container" id="about">

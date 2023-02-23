@@ -224,13 +224,14 @@ export const useHeadlineReveal = (el, delay = 0) => {
     gsap.fromTo(
       el.current,
       {
-        y: "-100vh",
+        y: 600,
       },
       {
         y: 0,
         duration: 2,
         delay,
         ease: "power4.out",
+        stagger: 0.2,
       }
     );
   }, [el, delay]);

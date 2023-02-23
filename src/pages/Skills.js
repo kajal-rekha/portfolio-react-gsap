@@ -57,21 +57,21 @@ const Skills = () => {
     <div className="skills container" id="skills">
       <h2>My Skills</h2>
 
-      <div className="skills-wrapper grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-20 mt-40">
-        <ul className="skills-left flex flex-col gap-10">
+      <div className="skills-wrapper">
+        <ul className="skills-left">
           {data
             .filter((_, i) => i < Math.floor(data.length / 2))
             .map((skill, i) => (
               <li
                 key={skill.id}
-                className="skill-item overflow-hidden"
+                className="skill-item"
                 ref={(el) => (skillItemRef.current[i] = el)}
               >
                 <div
-                  className="flex gap-10 items-baseline"
+                  className="flex"
                   ref={(el) => (skillTextRef.current[i] = el)}
                 >
-                  <span className="skill-number text-white/50">
+                  <span className="skill-number ">
                     {String(skill.id).padStart(2, 0).padEnd(3, ".")}
                   </span>
                   <span className="skill-name"> {skill.title}</span>
@@ -80,20 +80,20 @@ const Skills = () => {
             ))}
         </ul>
 
-        <ul className="skills-right flex flex-col gap-10">
+        <ul className="skills-right ">
           {data
             .filter((_, i) => i >= Math.floor(data.length / 2))
             .map((skill, i) => (
               <li
                 key={skill.id}
-                className="skill-item reveal overflow-hidden"
+                className="skill-item "
                 ref={(el) => (skillItem2Ref.current[i] = el)}
               >
                 <div
-                  className="flex gap-10 items-baseline"
+                  className="flex "
                   ref={(el) => (skillText2Ref.current[i] = el)}
                 >
-                  <span className="skill-number text-white/50">
+                  <span className="skill-number ">
                     {String(skill.id).padStart(2, 0).padEnd(3, ".")}
                   </span>
                   <span className="skill-name"> {skill.title}</span>

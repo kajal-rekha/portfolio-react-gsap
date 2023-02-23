@@ -236,6 +236,7 @@ hr {
 
 .about-left p {
   font-size: 2rem;
+  margin-top: 2rem;
 }
 
 .about a {
@@ -250,4 +251,13 @@ hr {
 
 .skills {
   margin: 0 auto;
+}
+
+.skills {
+  text-align: center;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
 }
