@@ -249,8 +249,15 @@ hr {
   text-decoration: underline;
 }
 
+.skills {
+  text-align: center;
+}
+
 .skills-wrapper {
   display: flex;
   flex-direction: row;
   text-align: center;
+  font-size: 3rem;
+  margin-left: 40rem;
+  margin-top: 5rem;
 }

@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 
 import NotFound from "./pages/NotFound";
 import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
+//import Skills from "./pages/Skills";
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
-        <Route path="/skills" element={<Skills />} />
+        {/* <Route path="/skills" element={<Skills />} /> */}
 
         <Route path="*" element={<NotFound />} />
       </Routes>

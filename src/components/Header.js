@@ -54,10 +54,10 @@ const Header = () => {
       <hr ref={line1} />
 
       <div className="row">
-        <span ref={link1}>Front-end developer</span>
+        <span ref={link1}>Mern Stack developer</span>
         <a
           ref={link2}
-          href="https://docs.google.com/document/d/1EMSJU63KL6L1NDfXlTS9F_nWjINVLwZhYC0BuyFrA9w/edit?usp=sharing"
+          href="https://drive.google.com/file/d/1KPUBmVB2oittzCcTlb_9V4Y9_6C8gYJh/view?usp=drive_link"
           target="_blank"
           rel="noreferrer"
         >
